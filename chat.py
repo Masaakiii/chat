@@ -21,6 +21,7 @@ def convert(lines):
 			new.append(person + ': ' + line)
 	return new
 
+#寫入
 def write_file(filename, lines):
 	with open(filename, 'w', encoding='utf-8-sig') as f:
 		for line in lines:
@@ -31,7 +32,5 @@ def main():
 	lines = read_file('input.txt')
 	lines = convert(lines)
 	write_file('output.txt', lines)
-	
-
 
 main()
